@@ -1,0 +1,993 @@
+//font-family: 'Muli', sans-serif;
+//font-family: 'Montserrat', sans-serif;
+$heading-font: 'Montserrat', sans-serif
+$heading-color: #444444
+$paragraph-font: 'Muli', sans-serif
+$paragraph-color: #757575
+$buttonbg: #ffe400
+////////////////////////SLIDE///////////////////////////////
+body
+  margin: 0px
+  font-display: swap
+.wrapper
+  max-width: 305px
+  margin: 0px auto
+.shadow 
+  position: relative
+  text-align: center
+  &::after
+    content: 'ABOUT'
+    font-size: 1em*3
+    font-family: $heading-font
+    font-weight: 900
+    color: #e8e8e8
+    position: absolute
+    top: -160%
+    left: 0
+    right: 0
+    z-index: -1
+    overflow: hidden
+.buttons
+  display: flex
+  justify-content: space-around  
+button
+  cursor: pointer
+  font-weight: 800
+a 
+  text-decoration: none
+h2
+  margin: 0px
+  font-family: $heading-font
+  color: $heading-color
+ul
+  list-style: none
+  padding: 0px        
+////////////////////////SLIDE///////////////////////////////
+.slider
+  position: relative
+  overflow: hidden
+  height: 365px
+  display: flex
+  flex-flow: row nowrap
+  align-items: flex-end
+  margin-bottom: 1.5em
+  justify-content: center
+  .slider_inner
+    position: absolute
+    top: 0
+    left: 0
+    width: 100% * 3
+    transition: all 1s ease-out
+    display: flex
+    flex-flow: row nowrap
+    .slider_contents            
+      flex: 1     
+      h1
+        font-family: $heading-font
+        color: $heading-color
+        font-weight: 900
+      p 
+        font-family: $paragraph-font
+        color: $paragraph-color
+      button
+        padding: 1em 2em
+        background-color: transparent
+        border: 1px solid $heading-color
+        font-family: $heading-font
+        font-weight: 400
+        transition: all ease-in-out 0.3s
+        &:hover
+          background: $heading-color
+          color: white   
+  .slider_nav
+    width: 2em
+    height: 2em
+    margin: 0rem 2rem
+    z-index: 10    
+    background: #e3e3e3
+    appearance: none
+    &:checked
+      background: $heading-color
+      @for $i from 0 to 3
+        &:nth-of-type(#{$i+1})
+          ~.slider_inner
+            transform: translateX((-100% * $i) / 3)
+////////////////////////SLIDE//////////////////////////////
+.menu
+  background: #2a2a2a
+  padding: 1em 0px
+  text-align: center
+  color: white
+  img
+    display: block
+    margin: 0px auto
+  button
+    background-color: transparent
+    font-family: $heading-font
+    font-weight: 900
+    font-size: 1.5em
+    color: white
+    padding: 0em 30%
+    border: none
+  ul  
+    font-family: $heading-font
+    font-weight: 300
+    margin: 0em
+    max-height: 0px
+    opacity: 0
+    transition: all ease-in-out 0.3s
+    position: relative
+    overflow: hidden
+    a 
+      display: block
+      padding: 0.6em
+      color: white
+      &:hover
+        color: $buttonbg
+      &:visited
+        color: white
+  .opened-menu
+    max-height: 100em
+    opacity: 1
+    margin-top: 1em    
+////////////////////////SLIDE//////////////////////////////
+.about
+  padding: 2em 0em 1.75em
+  text-align: center
+  font-family: $heading-font
+  .shadow
+    &::after
+      top: -30%
+  p
+    font-family: $paragraph-font
+    color: $paragraph-color
+  .buttons
+    margin: 2em auto
+    button
+      background: $buttonbg
+      color: black
+      font-family: $heading-font
+      border: none
+      width: 45%
+      padding: 1em 0em
+      font-weight: 800
+      transition: all ease-in-out 0.3s
+      &:hover
+        color: $buttonbg 
+        background: black
+  .item_about
+    background: #212121
+    display: flex
+    flex-direction: column
+    color: white
+    padding: 2em
+    margin-bottom: 0.5em
+    &:hover
+      cursor: pointer
+      background: no-repeat 50% 50% url(/img/item_about.jpg)
+      background-size: cover
+      h3, i, p  
+        color: black
+    &:hover .item_about_text
+        opacity: 1
+        max-height: 10em
+    .item_about_text
+      max-height: 0px
+      opacity: 0
+      margin: 0px 
+      transition: all ease-in-out 0.3s   
+    i 
+      font-size: 5em
+      color: $buttonbg
+    h3
+      font-weight: 800
+  .counter
+    margin-top: 2em
+    color: $heading-color
+    ul   
+      display: flex
+      flex-wrap: wrap
+      li 
+        width: 50%
+        h1
+          margin-bottom: 0px
+          font-size: 2.5em
+        p
+          margin: 0px
+          color: $paragraph-color
+////////////////////////SLIDE/////////////////////////////
+.responsive
+  border-top: 1px solid #d6d6d6
+  font-family: $paragraph-font
+  color: $paragraph-color
+  padding: 2em 0em
+  position: relative
+  z-index: 1
+  background: #fafafa
+  .shadow 
+    text-align: left
+    &::after
+      content: 'RESPONSIVE'
+      left: -0.35%
+      color: #f0f0f0
+  ul
+    li
+      margin-top: 0.5em  
+  button
+    background: $buttonbg
+    color: black
+    font-family: $heading-font
+    border: none
+    padding: 1em 2em
+    transition: all ease-in-out 0.3s
+    &:hover
+      color: $buttonbg 
+      background: black  
+////////////////////////SLIDE/////////////////////////////
+.whoweare
+  background: no-repeat 50% 50% url(/img/whoweare.jpg)
+  text-align: center
+  color: white
+  padding: 2em 0em
+  h1 
+    font-family: $heading-font
+    margin-bottom: 0em
+  p
+    font-family: $paragraph-font 
+  button
+    background: transparent
+    font-family: $heading-font
+    border: 1px solid white
+    width: 45%
+    color: white
+    padding: 1em 0em
+    transition: all ease-in-out 0.3s
+    &:hover
+      border-color: $buttonbg
+      color: black 
+      background: $buttonbg
+////////////////////////SLIDE/////////////////////////////
+.features
+  padding: 2em 0em
+  font-family: $paragraph-font
+  color: $paragraph-color
+  .shadow 
+    &::after
+      content: 'FEATURES'
+      top: -30%
+  .container_features
+    margin-top: 2em
+    .item_feature
+      display: flex
+      &:nth-child(even)
+        display: none
+      img
+        height: 66px
+        margin-right: 0.6em
+      h3
+        margin: 0em
+        font-family: $heading-font
+        color: $heading-color
+  .btn-feature
+    font-family: $heading-font
+    color: $heading-color
+    background: transparent
+    border: 1px solid $heading-color
+    padding: 0.5em 2em
+    display: block
+    margin: 0.5em auto 0px
+    transition: all ease-in-out 0.3s
+    &:hover
+      color: white 
+      background: $heading-color    
+////////////////////////SLIDE/////////////////////////////
+.portfolio
+  background: $buttonbg
+  position: relative
+  z-index: 1
+  padding-top: 2em
+  font-family: $heading-font
+  .shadow
+    color: black
+    &::after
+      content: 'WORK'
+      color: #e8d100
+  ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    font-weight: 800
+    li 
+      margin-top: 0.5em
+      border: 1px solid black
+      a
+        display: block
+        padding: 0.5em
+        color: black
+        transition: all ease-in-out 0.3s
+        &:visited
+          color: black
+        &:hover
+          background: black
+          color: white
+  .container_portfolio
+    margin-top: 1.5em
+    background: white
+    .item_photo
+      position: relative
+      &:nth-child(odd)
+        display: none
+      &:hover .item_photo_hover
+        opacity: 1
+        max-height: 100em 
+      img
+        width: 100%
+        display: block
+      .item_photo_hover
+        position: absolute
+        bottom: 0%
+        width: 100%
+        background: rgba(255,255,255, 0.6)
+        opacity: 0
+        max-height: 0px
+        transition: all 0.3s ease-in-out
+        .circlebuttons
+          position: absolute
+          top: -50%
+          left: 70%
+          padding: 0.4em          
+          i
+            background: white
+            border: 1px solid black
+            padding: 0.5em        
+            border-radius: 50% 50%
+            color: black
+            position: relative
+            z-index: 2          
+            &:hover
+              background: $buttonbg
+              border-color: #e4cd00
+          a
+            &:first-child
+              &::before
+                content: ''
+                display: block
+                background: rgba(255,255,255, 0.6)
+                height: 55%
+                width: 100%
+                position: absolute
+                top: 0em
+                left: 0em
+                border-top-left-radius: 22.5px
+                border-top-right-radius: 22.5px            
+        h4 
+          color: $heading-color
+          margin: 1em
+          &::after
+            content: '-FASHION'
+            font-size: 0.6em
+            color: $paragraph-color
+            font-family: $paragraph-font     
+////////////////////////SLIDE/////////////////////////////
+.services
+  padding: 2em 0em
+  font-family: $heading-font
+  color: $heading-color
+  text-align: center
+  .shadow 
+    &::after
+      content: 'SERVICE'
+      top: -30%
+  .container_services
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 0.75em
+    margin-top: 2em
+    .item_service
+      i
+        font-size: 1em*3
+      p
+        font-family: $paragraph-font
+        color: $paragraph-color
+////////////////////////SLIDE/////////////////////////////
+.pricing
+  background: $buttonbg
+  position: relative
+  z-index: 1
+  padding: 2em 0em
+  text-align: center
+  font-family: $paragraph-font
+  color: white 
+  .shadow
+    color: black
+    &::after
+      content: 'PRICING'
+      color: #e8d100
+  .container_pricing
+    margin-top: 2em
+    .item_price
+      margin-top: 1.5em
+      .popular
+        margin: 0px
+        background: #e6e6e6
+        padding: 0.3em
+        color: $heading-color
+        font-weight: 800
+      .price
+        background: no-repeat 50% 50% url(/img/item_price_1.jpg)
+        background-size: cover
+        padding: 1em
+        &:nth-child(2)
+          background: no-repeat 50% 50% url(/img/item_price_2.jpg)
+          background-size: cover
+      .price_3
+        background: no-repeat 50% 50% url(/img/item_price_3.jpg)
+        background-size: cover
+        padding: 1em
+      h4
+        letter-spacing: 3px
+        margin: 0.5em 0em
+      p
+        margin-top: 0em
+        &:last-child
+          color: #dbdbdb
+          margin-bottom: 0.5em
+        .number
+          font-size: 1em*3
+          &:before
+            content: '$'
+            position: relative
+            top: -15px
+            font-size: 1em*0.5
+    ul
+      background: white
+      margin: 0px
+      padding-top: 1em
+      color: $paragraph-color
+      border: 1px solid #f0f0f0
+      li
+        padding: 1em 0em
+        border-bottom: 1px solid #f0f0f0
+        &:last-child
+          border: none
+    .item_price_bottom
+      color: $heading-color
+      background: white
+      margin-top: 4px
+      display: block
+      padding: 0.7em 0em
+      font-weight: 800
+      transition: all 0.3s ease-in-out
+      &:hover
+        background: #585858
+        color: $buttonbg      
+////////////////////////SLIDE/////////////////////////////
+.ourteam
+  padding: 2em 0em
+  font-family: $heading-font
+  text-align: center
+  .shadow
+    &::after
+      content: 'EXPERT'
+  .container_team
+    margin-top: 2em
+    .item_team
+      margin-top: 1em
+      position: relative
+      &:hover .item_team_hover
+        opacity: 1
+      img
+        width: 100%
+      .item_team_text
+        background: #ebebeb
+        color: $heading-color
+        padding: 0em 12.5%
+        h3
+          margin: 0px
+          padding: 0.5em 0em
+          border-bottom: 1px dashed $heading-color 
+        p
+          margin: 0em
+          padding: 0.5em 0em
+          font-weight: 800
+      .item_team_hover
+        opacity: 0
+        position: absolute
+        top: 0
+        left: 0
+        background: $buttonbg
+        padding: 0% 10%
+        display: flex 
+        flex-direction: column
+        justify-content: center   
+        height: 100%
+        transition: all 0.3s ease-in-out
+        p
+          font-family: $paragraph-font
+          margin-top: 15%
+        ul
+          color: #6b6000
+          display: flex
+          width: 100% 
+          padding-top: 1em
+          margin-top: 15%
+          border-top: 1px dashed $heading-color 
+          li
+            width: 16.6666666667%     
+            a
+              padding: 1em 0em
+              display: block
+              &:visited
+                color: #6b6000
+              &:hover
+                color: black                  
+////////////////////////SLIDE/////////////////////////////
+.impressed
+  color: white
+  background: no-repeat 50% 50% url(/img/impressed.jpg)
+  text-align: center
+  padding: 10% 5%
+  h1
+    margin: 0px
+    font-family: $heading-font
+  p
+    font-family: $paragraph-font
+  .buttons
+    margin-top: 15% 
+    button
+      background: white
+      font-family: $heading-font
+      width: 45%
+      color: $heading-color
+      padding: 1em 0em
+      border: none
+      transition: all ease-in-out 0.3s
+      &:hover
+        color: black 
+        background: $buttonbg 
+////////////////////////SLIDE/////////////////////////////
+.news
+  padding: 2em 0em
+  font-family: $heading-font
+  text-align: center
+  color: $heading-color
+  .shadow
+    &::after
+      content: 'NEWS'
+  .container_news
+    margin-top: 2em
+    .item_news
+      margin-top: 1.5em  
+      img
+        width: 100%
+      h3
+        margin-bottom: 0em
+      p
+        color: $paragraph-color
+        font-family: $paragraph-font
+      .item_news_bloginfo
+        font-size: 0.75em
+        letter-spacing: 0.5px
+      .item_news_text
+        text-align: left
+        padding: 0em 1em
+        p
+          margin-bottom: 0.5em  
+      a
+        margin: 0px auto
+        padding: 0.8em
+        font-weight: 800
+        font-size: 0.75em
+        display: block
+        width: 30%
+        border: 1px solid white
+        transition: all 0.3s ease-in-out
+        &:hover
+          background: $buttonbg
+          border-color:  black
+          border-radius: 100em
+          color: black
+        &:visited
+          color: $heading-color
+////////////////////////SLIDE/////////////////////////////
+.contacts
+  background: #f0f0f0
+  padding: 2em 0em
+  position: relative
+  z-index: 1
+  .shadow
+    &::after
+      content: 'CONTACT'
+      color: #e6e6e6
+  form
+    margin-top: 2em
+    padding: 0em 0.5em
+    display: flex
+    flex-wrap: wrap
+    input
+      color: #808080
+      font-family: $heading-font
+      padding: 0.75em
+      margin-bottom: 1em
+      width: 100%
+      border: 1px solid #dedede
+    textarea
+      color: #808080
+      font-family: $heading-font
+      padding: 0.75em
+      margin-bottom: 1em
+      width: 100%
+      border: 1px solid #dedede
+      height: 3em
+      resize: none
+    .submit
+        background: transparent
+        margin: 0px
+        font-family: $heading-font
+        font-weight: 800
+        border: 1px solid $heading-color
+        width: 30%
+        color: $heading-color
+        padding: 1em
+        transition: all ease-in-out 0.3s
+        &:hover
+          border-color: #dedede
+          color: black 
+          background: $buttonbg
+////////////////////////SLIDE/////////////////////////////
+.container_map
+  .map_button
+    background: $buttonbg
+    font-family: $heading-font
+    font-weight: 800
+    text-align: center
+    padding: 3rem
+    cursor: pointer
+  .closed-map
+    width: 100%
+    transition: all ease-in-out 0.3s
+  .opened-map
+    height: 70vh
+////////////////////////SLIDE/////////////////////////////
+.footer
+  background: #212121
+  color: white
+  font-family: $paragraph-font
+  padding: 2em 0em
+  .item_footer
+    text-align: center
+    #item_footer_icon
+      font-size: 1em*3
+      background: #2e2d2d
+      height: 50px
+      width: 50px
+      padding: 0.15em
+      border: 1px solid #7f7f7f
+      border-radius: 50% 50%
+    ul
+      display: flex
+      justify-content: space-around
+      font-size: 1.5em
+      a
+        padding: 0.5em
+        display: block
+        color: white
+        &:hover
+          color: $buttonbg
+        &:visited
+          color: white  
+////////////////////////SLIDE/////////////////////////////
+.greyline
+  background: #2e2d2d
+  padding: 1em
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+@media screen and (min-width: 360px)
+  .wrapper
+    max-width: 340px
+  .slider
+    height: 310px           
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////            
+@media screen and (min-width: 375px)
+  .wrapper
+    max-width: 355px
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////    
+@media screen and (min-width: 411px)
+  .wrapper
+    max-width: 390px
+  .slider
+    height: 310px  
+  .about  
+    .shadow 
+      &::after
+        top: -160%
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////          
+@media screen and (min-width: 731px)
+  .wrapper
+    max-width: 720px
+  .slider
+    height: 250px
+    p
+      width: 65%
+    .slider_nav
+      cursor: pointer    
+  .features, .services  
+    .shadow 
+      &::after
+        top: -160%      
+  .menu
+    ul      
+      display: grid
+      grid-template-columns: 1fr 1fr
+      li
+        &:last-child
+          grid-column: 1/3
+        a
+          padding: 1em   
+  .about
+    .container_about
+      display: grid
+      grid-column-gap: 0.5em     
+      grid-template-columns: 1fr 1fr 1fr
+      .item_about        
+        height: 325px
+        padding: 0px 10%
+        margin-bottom: 0em
+        border-radius: 20px
+        justify-content: center
+    .counter 
+      ul 
+        li 
+          width: 25%
+          p
+            margin: 0em auto
+  .responsive
+    .wrapper
+      max-width: 600px
+  .whoweare
+    p
+      padding: 1em 10%               
+  .features
+    .container_features
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 0.5em
+      .item_feature
+        &:nth-child(even)
+          display: flex        
+    .btn-feature
+      display: none
+  .portfolio
+    ul
+      max-width: 480px
+      margin: 0px auto
+    .container_portfolio
+      display: grid
+      grid-template-columns: 1fr 1fr
+      .item_photo
+        cursor: pointer
+        &:nth-child(odd)
+          display: block  
+  .services
+    .wrapper
+      max-width: 570px
+      .container_services
+        grid-gap: 1em 
+  .pricing
+    .container_pricing
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: 0.5em
+      align-items: end
+      margin: 0px     
+  .ourteam
+    padding: 5em 0em
+    .container_team
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      .item_team
+        font-size: 0.80em
+        margin-top: 0em
+        cursor: pointer              
+  .impressed
+    .buttons
+      margin-top: 10%
+  .news
+    .container_news
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 2em
+  .contacts
+    form
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: 1em
+      input
+        box-sizing: border-box 
+      textarea
+        box-sizing: border-box
+        grid-column: 1/3
+        height: 20vh
+      .submit
+        cursor: pointer  
+  .footer
+    .container_footer
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      grid-column-gap: 3em      
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+@media screen and (min-width: 1024px)
+  .wrapper
+    max-width: 950px
+  .menu
+    ul
+      grid-template-columns: 1fr 1fr 1fr
+      li
+        &:last-child
+          grid-column: 1/4
+  .responsive
+    .wrapper
+      max-width: 850px
+  .ourteam
+    .container_team
+      .item_team
+        .item_team_hover
+          font-size: 1rem
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+@media screen and (min-width: 1200px)
+  .wrapper
+    max-width: 1140px
+  .about, .whoweare, .impressed
+    .buttons
+      display: block
+      button
+        padding: 1.5em
+        width: 17.5%
+        &:first-child
+          margin-right: 2em  
+  .slider
+    height: 100vh
+    background: no-repeat 50% 50% url(/img/slide.jpg)
+    margin-bottom: 0px
+    justify-content: flex-start
+    h1
+      font-size: 3.5em
+      margin-top: 31%
+      span
+        display: block
+    p
+      margin-top: 5em
+    .slider_nav 
+      height: 7.5px
+      width: 30px
+      margin: 0em 0.5em 21em
+      &:first-child
+        margin-left: 20.1%
+  .menu
+    height: 79px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    .container_menu  
+      display: grid
+      grid-template-columns: 2fr 4fr
+      align-items: center
+      img
+        margin: 0px
+      button
+        display: none
+      ul
+        grid-template-columns: repeat(7, 1fr)
+        align-items: center
+        display: grid
+        opacity: 1
+        max-height: 100em
+        li
+          &:last-child
+            grid-column: 7
+  .about
+    background: no-repeat 50% 50% url(/img/about.jpg) 
+    padding: 7.5em 0em
+    position: relative
+    z-index: 1
+    p 
+      width: 75%
+      margin: 2em auto 0em
+    .buttons
+      margin: 4em
+    .container_about  
+      grid-column-gap: 2em
+      .item_about
+        height: 400px
+        p 
+          width: 100%
+    .counter
+      margin-top: 6em
+      ul 
+        margin-top: 4em                   
+  .responsive
+    padding: 10em 0em
+    background: no-repeat 50% 50% url(/img/responsive.jpg)
+    p
+      width: 50%   
+    .wrapper
+      max-width: 1140px
+  .whoweare
+    padding: 7.5% 5%
+    p 
+      width: 65%
+      margin: 2em auto    
+  .features
+    padding: 10em 0em
+    .container_features
+      grid-template-columns: 1fr 1fr 1fr
+      grid-gap: 3em
+      margin-top: 7.5em    
+  .portfolio
+    padding-top: 6em
+    ul
+      margin: 3em auto
+    .container_portfolio
+      grid-template-columns: 1fr 1fr 1fr 1fr
+  .services
+    background: no-repeat 50% 50% url(/img/service.jpg)
+    background-size: cover
+    padding: 15em 0em
+    position: relative
+    z-index: 1
+    .wrapper
+      margin-left: 50%
+      .container_services
+        margin-top: 7.5em
+        grid-gap: 4em 
+  .pricing
+    padding: 7.5em 0em
+    background: no-repeat 50% 50% url(/img/pricing.jpg)
+    .container_pricing
+      grid-column-gap: 2em
+  .ourteam
+    padding: 10em 0em
+    .container_team
+      grid-column-gap: 2em  
+  .news
+    padding: 10em 0em
+    .container_news
+      grid-template-columns: 1fr 1fr 1fr 1fr
+      .item_news 
+        a 
+          width: 40%
+  .contacts
+    padding: 10em 0em
+    background: no-repeat 50% 50% url(/img/contact.jpg)
+    background-size: cover
+    form
+      input
+        padding: 1.25em
+      textarea
+        height: 40vh
+        padding: 1.25em
+  .container_map
+    .map_button
+      background: no-repeat 50% 50% url(/img/map.jpg)
+      font-size: 1.5rem     
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+////////////////////////SLIDE/////////////////////////////
+@media screen and (min-width: 1338px)
+  .portfolio  
+    .container_portfolio
+      .item_photo
+        .item_photo_hover
+          .circlebuttons
+            left: 75%
