@@ -7,9 +7,9 @@ To use Gulp you need Node.js
 * [Node.js installation](https://github.com/nodejs/node)
 
 ```bash
-	$git clone https://github.com/denislozitskiy/project-portfolio-marvel.git <your project name>
-	cd <your project name>
-	npm install
+$git clone https://github.com/denislozitskiy/project-portfolio-marvel.git <your project name>
+$cd <your project name>
+$npm install
 ```
 
 ### Gulp Features
@@ -41,9 +41,9 @@ To use Gulp you need Node.js
 * [Установка Node.js](https://github.com/nodejs/node)
 
 ```bash
-	$git clone https://github.com/denislozitskiy/project-portfolio-marvel.git <your project name>
-	cd <your project name>
-	npm install
+$git clone https://github.com/denislozitskiy/project-portfolio-marvel.git <your project name>
+$cd <your project name>
+$npm install
 ```
 
 ### Функции Gulp
