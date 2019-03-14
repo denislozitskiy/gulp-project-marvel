@@ -1,4 +1,4 @@
---English
+п»ї--English
 Unfortunately, I didn't find a person who created this .psd template.
 The project was created for educational purposes and does not pretend to monetize.
 
@@ -6,10 +6,10 @@ If you have any questions, please contact me at Github:
 
 https://github.com/denislozitskiy
 
---Русский
-К сожалению, я не нашёл человека который создал этот .psd шаблон.
-Проект был создан для образовательных целей и не претендует на монетизацию.
+--Р СѓСЃСЃРєРёР№
+Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, СЏ РЅРµ РЅР°С€С‘Р» С‡РµР»РѕРІРµРєР° РєРѕС‚РѕСЂС‹Р№ СЃРѕР·РґР°Р» СЌС‚РѕС‚ .psd С€Р°Р±Р»РѕРЅ.
+РџСЂРѕРµРєС‚ Р±С‹Р» СЃРѕР·РґР°РЅ РґР»СЏ РѕР±СЂР°Р·РѕРІР°С‚РµР»СЊРЅС‹С… С†РµР»РµР№ Рё РЅРµ РїСЂРµС‚РµРЅРґСѓРµС‚ РЅР° РјРѕРЅРµС‚РёР·Р°С†РёСЋ.
 
-Если у Вас есть какие либо вопросы, свяжитесь со мной на Github:
+Р•СЃР»Рё Сѓ Р’Р°СЃ РµСЃС‚СЊ РєР°РєРёРµ Р»РёР±Рѕ РІРѕРїСЂРѕСЃС‹, СЃРІСЏР¶РёС‚РµСЃСЊ СЃРѕ РјРЅРѕР№ РЅР° Github:
 
 https://github.com/denislozitskiy
